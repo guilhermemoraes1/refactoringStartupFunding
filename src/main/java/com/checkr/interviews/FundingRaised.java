@@ -16,7 +16,7 @@ public class FundingRaised {
         return results;
     }
 
-    private static Map<String, String> mapRowToResult(String[] row) {
+    private static Map<String, String> createMap(String[] row) {
         Map<String, String> mapped = new HashMap<>();
         mapped.put("permalink", row[0]);
         mapped.put("company_name", row[1]);
@@ -57,7 +57,7 @@ public class FundingRaised {
 
         List<Map<String, String>> output = new ArrayList<>();
         for (String[] row : csvData) {
-            output.add(mapRowToResult(row));
+            output.add(createMap(row));
         }
         
         return output;
