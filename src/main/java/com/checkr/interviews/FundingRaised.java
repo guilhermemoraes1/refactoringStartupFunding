@@ -56,6 +56,7 @@ public class FundingRaised {
         }
 
         List<Map<String, String>> output = new ArrayList<>();
+        // Enhanced for loop ou For-Each Loop
         for (String[] row : csvData) {
             output.add(createMap(row));
         }
